@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sayfam</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+// var Today = new Date;
+// var mybday = new Date(2000 , 10, 14);
+// var 
+
+// var today = new Date();
+// var mybday = new Date(2000 , 10 , 14);
+
+// var yasadigimMilliSaniye=today.getTime()-mybday.getTime();
+
+
+// console.log(yasadigimMilliSaniye);
+
+// var yasSaniye=Math.floor(yasadigimMilliSaniye/1000);
+// yasSaliye=yasadigimMilliSaniye-yasSaniye*1000
+// var yasDeqiqe=Math.floor(yasadigimMilliSaniye/1000/60);
+// var qaliqSaniye=yasSaniye-yasDeqiqe*60
+// console.log(qaliqSaniye+ " " + yasSaliye);
+
+	
+	var aylar=["Yanvar" , "Fevral" , "Mart" , "Aprel" , "May" , "Iyun" , "Iyul" , "August" , "Sentyabr" , "Oktyabr" , "Noyabr" , "Dekabr"]
+	var gunler = ["Bazar Ertesi" , "Cersenbe Axsami" , "Cersenbe" , "Cume Axsami" , "Cume" , "Senbe" ,"Bazar"]
+
+
+	function tarixGoster{
+
+		bugun=new Date();
+
+		var tarix="Salam bu gun : "  + bugun.getFullYear() + " ci il " + aylar[bugun.getMonth()] + " " +bugun.getDate()+getSeconds() + " " +gunler[bugun.getDay()-1]+ " gunu, saat :" + bugun.getHours()+": "+bugun.getMinutes() + ": " +bugun.getSeconds() + ": " + bugun.getMilliseconds()
+
+		document.getElementById("tarix").innerHTML=tarix;
+
+	}
+	setInterval(tarixGoster,1)
+
+
+</script>
+</body>
+</html>
